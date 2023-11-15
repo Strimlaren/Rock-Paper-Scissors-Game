@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="title-score-wrapper">
+    <div class="title">
+      Rock<br>
+      Paper<br>
+      Scissors
+    </div>
+    <div class="score-wrapper">
+      <div class="player-score">
+        <p>PLAYER</p>
+        <span class="score" id="p-score">0</span>
+      </div>
+      <div class="computer-score">
+        <p>COMPUTER</p>
+        <span class="score" id="cpu-score">0</span>
+      </div>
+    </div> 
+  </div>
+
+  <div class="play-field">
+    <div class="player-side">
+      <p class="player-info" id="player-info">PICK YOUR SIGN</p>
+      <button class="player-choice" id="player-choice"><img src="images/rock.svg" class="p-svg" id="player-svg"></button>
+    </div>
+
+    <div class="middle">
+      <p class="announcements" id="announcer">
+        READY?
+      </p>
+      <button id="play" class="play-button">BRING IT!</button>
+    </div>
+
+    <div class="computer-side">
+      <p class="computer-info" id="computer-info">I PICK AFTER YOU</p>
+      <button class="computer-choice not-allowed" id="player-choice"><img src="images/rock.svg" class="c-svg" id="player-svg"></button>
+    </div>
+  </div>
+  <div class="bottom-buttons-div">
+    <button class="bottom-button" id="rules">RULES</button>
+    <button class="bottom-button" id="rules">RESET GAME</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

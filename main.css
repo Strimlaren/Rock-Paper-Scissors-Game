@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  background-image: radial-gradient(circle at top, #082451, #052046, #041b3c, #031731, #031127);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  padding: 8px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.466);
+  border-radius: 3px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  line-height: 1.4rem;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+}
+
+.score-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.player-score,
+.computer-score {
+  background-color: whitesmoke;
+  border-radius: 3px;
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  color: #0a5cdf;
+  letter-spacing: 2px;
+}
+
+.p-svg {
+  width: 180px;
+  transform: rotate(45deg);
+  padding: 10px;
+  transition: all ease 0.5s;
+}
+
+.p-svg:hover {
+  transform: rotate(90deg);
+  cursor: grab;
+}
+
+.c-svg {
+  width: 180px;
+  transform: rotate(-45deg);
+  padding: 10px;
+}
+
+.score {
+  font-size: 3rem;
+  color: #082451;
+}
+
+.play-field {
+  width: 82vw;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-side,
+.computer-side {
+  text-align: center;
+  width: 30vw;
+}
+
+.middle {
+  width: 18vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.player-choice {
+  background-color: whitesmoke;
+  border: 0;
+  border-radius: 50%;
+  margin-top: 50px;
+  box-shadow:
+    -1px 4px 0 1px rgba(63, 63, 63, 0.144) inset,
+    0 0 0 30px orange,
+    0px 4px 0 30px rgb(196, 95, 0);
+  transition: box-shadow ease 0.5s;
+}
+
+.computer-choice {
+  background-color: whitesmoke;
+  border: 0;
+  border-radius: 50%;
+  margin-top: 50px;
+  box-shadow:
+    -1px 4px 0 1px rgba(63, 63, 63, 0.144) inset,
+    0 0 0 30px rgb(0, 81, 255),
+    0px 4px 0 30px rgb(3, 0, 192);
+    transition: box-shadow ease 0.5s;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.winner {
+  box-shadow:
+  -1px 4px 0 1px rgba(63, 63, 63, 0.144) inset,
+  0 0 0 30px orange,
+  0 0 0 30px rgb(196, 95, 0),
+  0 0 0 64px rgba(245, 245, 245, 0.09),
+  0 0 0 94px rgba(245, 245, 245, 0.06),
+  0 0 0 134px rgba(245, 245, 245, 0.03);
+  border-radius: 50%;
+}
+
+.player-info, 
+.computer-info,
+.announcements {
+  color: whitesmoke;
+  text-shadow: whitesmoke 1px 0 3px;
+}
+
+.announcements {
+  font-size: 3rem;
+}
+
+.play-button {
+  padding: 13px;
+  width: 80%;
+  background-color: whitesmoke;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  box-shadow: 1px 2px 2px 1px orange;
+  transition: all ease 0.5s;
+}
+
+.play-button:hover {
+  box-shadow: -1px 2px 2px 1px rgb(0, 132, 255);
+  cursor: pointer;
+}
+
+.bottom-buttons-div {
+  width: 70vw;
+  margin-top: 90px;
+  display: flex;
+  justify-content: end;
+}
+
+.bottom-button {
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.466);
+  border-radius: 3px;
+  border: 0;
+  background-color: transparent;
+  color: whitesmoke;
+  margin-left: 10px;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  transition: all ease 0.8s;
+}
+
+.bottom-button:hover {
+  cursor:pointer;
+  box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.466);
+}

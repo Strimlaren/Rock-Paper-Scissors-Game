@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <div class="title-score-wrapper">
@@ -26,13 +28,15 @@
         <p>COMPUTER</p>
         <span class="score" id="cpu-score">0</span>
       </div>
-    </div> 
+    </div>
   </div>
 
   <div class="play-field">
     <div class="player-side">
       <p class="player-info" id="player-info">PICK YOUR SIGN</p>
-      <button class="player-choice scissors" id="player-choice"><img src="images/scissors.svg" class="p-svg" id="player-svg"></button>
+      <button class="player-choice scissors" id="player-choice">
+        <img src="images/scissors.svg" class="p-svg" id="player-svg">
+      </button>
     </div>
 
     <div class="middle">
@@ -40,12 +44,15 @@
         READY?
       </p>
       <button id="play" class="play-button">BRING IT!</button>
-      <p class="player-info top-margin"> History:</p><span id="history">-</span>
+      <p class="player-info top-margin"> History</p>
+      <span id="history">.</span>
     </div>
 
     <div class="computer-side">
       <p class="computer-info" id="computer-info">I PICK AFTER YOU</p>
-      <button class="computer-choice not-allowed rock" id="computer-choice"><img src="images/question.svg" class="c-svg" id="cpu-svg"></button>
+      <button class="computer-choice not-allowed rock" id="computer-choice">
+        <img src="images/question.svg" class="c-svg" id="cpu-svg">
+      </button>
     </div>
   </div>
   <div class="bottom-buttons-div">
@@ -55,4 +62,5 @@
   <p class="copyright"><span class="orange">&copy;</span> Mirza Mesinovic</p>
   <script src="main.js"></script>
 </body>
+
 </html>

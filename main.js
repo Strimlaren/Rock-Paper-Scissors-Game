@@ -40,8 +40,6 @@ function play_round() {
   cpu_choice.classList.remove("winner");
   choice_button.classList.remove("winner");
 
-
-
   let cpu_pick = Math.floor(Math.random() * 3);
   
   if (cpu_pick == 0) c_graphic.src = "images/rock.svg";
@@ -73,13 +71,13 @@ function play_round() {
   function cpu_win() {
     c_score.textContent = Number(c_score.textContent) + 1;
     cpu_choice.classList.add("winner");
-    announcer.textContent = "CPU Wins!"
+    announcer.textContent = "ROUND TO CPU"
   }
 
   function p_win() {
     p_score.textContent = Number(p_score.textContent) + 1;
     choice_button.classList.add("winner");
-    announcer.textContent = "Player Wins!";
+    announcer.textContent = "ROUND TO YOU";
   }
 
   function draw() {
@@ -90,6 +88,17 @@ function play_round() {
 
   play_button.disabled = false;
 
+  if (Number(p_score.textContent) == 5) {
+    play_button.disabled = true;
+    announcer.textContent = "YOU WON!"
+    return;
+  }
+
+  if (Number(c_score.textContent) == 5) {
+    play_button.disabled = true;
+    announcer.textContent = "YOU LOST!"
+    return;
+  }
 }
 
 function reset() {

@@ -105,6 +105,7 @@ function play_round() {
   if (Number(c_score.textContent) == 5) {
     play_button.disabled = true;
     announcer.textContent = "YOU LOST!"
+    c_info.textContent = "Get rekt noob!";
     return;
   }
 }

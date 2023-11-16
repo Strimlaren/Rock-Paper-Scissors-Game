@@ -218,3 +218,10 @@ p {
 .draw {
   color: whitesmoke;
 }
+
+.win,
+.loss,
+.draw,
+#history {
+  font-size: 2rem;
+}

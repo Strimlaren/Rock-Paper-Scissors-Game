@@ -58,11 +58,23 @@ p {
   width: 180px;
   transform: rotate(45deg);
   padding: 10px;
-  transition: all ease 0.5s;
+  transition: transform ease 0.5s;
 }
 
 .p-svg:hover {
   transform: rotate(90deg);
+  cursor: grab;
+}
+
+.p-svg-fix {
+  width: 180px;
+  transform: rotate(-45deg);
+  padding: 10px;
+  transition: transform ease 0.5s;
+}
+
+.p-svg-fix:hover {
+  transform: rotate(25deg);
   cursor: grab;
 }
 
@@ -189,4 +201,14 @@ p {
 .bottom-button:hover {
   cursor:pointer;
   box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.466);
+}
+
+.copyright {
+  color: whitesmoke;
+  margin-top: 100px;
+}
+
+span {
+  color: orange;
+  font-size: 1rem;
 }

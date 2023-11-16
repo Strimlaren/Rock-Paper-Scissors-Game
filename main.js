@@ -1,7 +1,11 @@
 const choice_button = document.getElementById("player-choice");
+const reset_button = document.getElementById("reset-button");
 const cpu_choice = document.getElementById("computer-choice");
 const graphic = document.getElementById("player-svg");
 choice_button.addEventListener("click", cycle_signs);
+reset_button.addEventListener("click", reset);
+
+const announcer = document.getElementById("announcer");
 
 function cycle_signs() {
   // Get list of classes of the button to check which sign is currently selected
@@ -36,6 +40,8 @@ function play_round() {
   cpu_choice.classList.remove("winner");
   choice_button.classList.remove("winner");
 
+
+
   let cpu_pick = Math.floor(Math.random() * 3);
   
   if (cpu_pick == 0) c_graphic.src = "images/rock.svg";
@@ -67,18 +73,25 @@ function play_round() {
   function cpu_win() {
     c_score.textContent = Number(c_score.textContent) + 1;
     cpu_choice.classList.add("winner");
+    announcer.textContent = "CPU Wins!"
   }
 
   function p_win() {
     p_score.textContent = Number(p_score.textContent) + 1;
     choice_button.classList.add("winner");
+    announcer.textContent = "Player Wins!";
   }
 
   function draw() {
     cpu_choice.classList.remove("winner");
     choice_button.classList.remove("winner");
+    announcer.textContent = "Draw!"
   }
 
   play_button.disabled = false;
 
+}
+
+function reset() {
+  location.reload();
 }

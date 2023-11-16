@@ -7,17 +7,19 @@ function cycle_signs() {
   // Get list of classes of the button to check which sign is currently selected
   const sign = choice_button.classList;
   // Check which sign is currently selected and cycle to the next on click
-  if (sign[1] === "rock") {
+  
+  if (sign[1] === "rock" || sign[2] === "rock") {
     sign.remove("rock");
     sign.add("scissors");
+    
     graphic.src = "images/scissors.svg"
   }
-  else if (sign[1] === "scissors") {
+  else if (sign[1] === "scissors" || sign[2] === "scissors") {
     sign.remove("scissors");
     sign.add("paper");
     graphic.src = "images/paper.svg"
   }
-  else if (sign[1] === "paper") {
+  else if (sign[1] === "paper" || sign[2] === "paper") {
     sign.remove("paper");
     sign.add("rock");
     graphic.src = "images/rock.svg"

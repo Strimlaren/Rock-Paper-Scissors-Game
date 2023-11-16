@@ -2,10 +2,12 @@ const choice_button = document.getElementById("player-choice");
 const reset_button = document.getElementById("reset-button");
 const cpu_choice = document.getElementById("computer-choice");
 const graphic = document.getElementById("player-svg");
+const c_info = document.getElementById("computer-info");
 choice_button.addEventListener("click", cycle_signs);
 reset_button.addEventListener("click", reset);
 
 const announcer = document.getElementById("announcer");
+const excuses = ["I was tired!", "I looked away!", "Luck!", "Who are you?!", "I was changing tires!", "It's cold over here!", "I wasn't trying!", "Im just warming up..", "Did we start already?"]
 
 function cycle_signs() {
   // Get list of classes of the button to check which sign is currently selected
@@ -68,22 +70,27 @@ function play_round() {
     if (cpu_pick == 0) cpu_win();
   }
 
+  
+
   function cpu_win() {
     c_score.textContent = Number(c_score.textContent) + 1;
     cpu_choice.classList.add("winner");
     announcer.textContent = "ROUND TO CPU"
+    c_info.textContent = "Not even close!";
   }
 
   function p_win() {
     p_score.textContent = Number(p_score.textContent) + 1;
     choice_button.classList.add("winner");
     announcer.textContent = "ROUND TO YOU";
+    c_info.textContent = excuses[Math.floor(Math.random() * excuses.length)];
   }
 
   function draw() {
     cpu_choice.classList.remove("winner");
     choice_button.classList.remove("winner");
     announcer.textContent = "Draw!"
+    c_info.textContent = "Boring!";
   }
 
   play_button.disabled = false;
@@ -91,6 +98,7 @@ function play_round() {
   if (Number(p_score.textContent) == 5) {
     play_button.disabled = true;
     announcer.textContent = "YOU WON!"
+    c_info.textContent = "I don't like this game :(";
     return;
   }
 

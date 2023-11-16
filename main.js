@@ -102,6 +102,7 @@ function play_round() {
     play_button.disabled = true;
     announcer.textContent = "YOU WON!"
     c_info.textContent = "I don't like this game :(";
+    play_button.textContent = "GAME OVER";
     return;
   }
 
@@ -109,6 +110,7 @@ function play_round() {
     play_button.disabled = true;
     announcer.textContent = "YOU LOST!"
     c_info.textContent = "Get rekt noob!";
+    play_button.textContent = "GAME OVER";
     return;
   }
 }

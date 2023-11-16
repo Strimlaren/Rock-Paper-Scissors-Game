@@ -174,10 +174,10 @@ p {
 }
 
 .bottom-buttons-div {
-  width: 70vw;
+  width: 60vw;
   margin-top: 90px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .bottom-button {

@@ -1,20 +1,35 @@
 const choice_button = document.getElementById("player-choice");
-const reset_button = document.getElementById("reset-button");
 const cpu_choice = document.getElementById("computer-choice");
+const reset_button = document.getElementById("reset-button");
 const graphic = document.getElementById("player-svg");
 const c_info = document.getElementById("computer-info");
 const c_graphic = document.getElementById("cpu-svg");
-const play_button = document.getElementById("play");
-const sign = choice_button.classList;
-const p_score = document.getElementById("p-score");
 const c_score = document.getElementById("cpu-score");
+const p_score = document.getElementById("p-score");
+const play_button = document.getElementById("play");
 const history = document.getElementById("history");
+const announcer = document.getElementById("announcer");
+const sign = choice_button.classList;
+
+const elements = {
+choice_button: document.getElementById("player-choice"),
+cpu_choice: document.getElementById("computer-choice"),
+reset_button: document.getElementById("reset-button"),
+graphic: document.getElementById("player-svg"),
+c_info: document.getElementById("computer-info"),
+c_graphic: document.getElementById("cpu-svg"),
+c_score: document.getElementById("cpu-score"),
+p_score: document.getElementById("p-score"),
+play_button: document.getElementById("play"),
+history: document.getElementById("history"),
+announcer: document.getElementById("announcer"),
+sign: choice_button.classList
+}
 
 play_button.addEventListener("click", play_round);
 choice_button.addEventListener("click", cycle_signs);
 reset_button.addEventListener("click", reset);
 
-const announcer = document.getElementById("announcer");
 const excuses = ["I was tired!", "I looked away!", "Luck!", "Who are you?!", "I was changing tires!", "It's cold over here!", "I wasn't trying!", "I'm just warming up..", "Did we start already?", "Neo, is that you?", "I was doing my nails!", "I wasn't ready!", "My water just broke..", "I dropped my taco..", "What are the rules again?", "Im not a real CPU..", "I wasn't given an AI..", "You're just guessing!", "I'm depressed. Mortgage.. kids.. WIFE!"];
 const mocking = ["You need a tissue?", "You are bad at this..", "Damn, I'm good.", "Why are you still here?", "I can do this all day!", "I pity the fool!", "PAIN!", "Cry me a river!", "Aww, you gonna cry?", "I've been training for years!", "I never lose!", "Are you trolling?", "I'm so good I'm scary.", "Hah! I'm reading your mind!", "Yo momma's not here!"]
 

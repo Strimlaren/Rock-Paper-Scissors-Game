@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: radial-gradient(circle at top, #082451, #052046, #041b3c, #031731, #031127);
+  background-image: radial-gradient(circle at top, #0d387e, #031731, #031127);
   height: 100vh;
   margin: 0;
   display: flex;
@@ -64,18 +64,6 @@ p {
 
 .p-svg:hover {
   transform: rotate(90deg);
-  cursor: grab;
-}
-
-.p-svg-fix {
-  width: 180px;
-  transform: rotate(-45deg);
-  padding: 10px;
-  transition: transform ease 0.5s;
-}
-
-.p-svg-fix:hover {
-  transform: rotate(25deg);
   cursor: grab;
 }
 
